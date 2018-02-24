@@ -46,7 +46,7 @@ function get_translation(text) {
     text = text.toUpperCase() ;
     for (var i = 0; i < text.length; ++i) {
         char = ALPH[text.charAt(i)] ;
-        if (char == 'undefined' ) {
+        if (char == undefined ) {
             res += text.charAt(i) ;
         } else {
             res += char ;
