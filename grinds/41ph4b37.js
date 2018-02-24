@@ -5,6 +5,8 @@ var LEET_CHARS   = "'(),-/01234567<=DY[\\]_`{|}" ;
 var LEET_MAX_LEN = 3 ;
 var LEET_AVG_LEN = 2 ;
 
+var ALPH_SIZE    = 26 ;
+
 // text -> t3xt
 ALPHA ['A'] = '4'  ;
 ALPHA ['B'] = '|3' ;

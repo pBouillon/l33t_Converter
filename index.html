@@ -14,24 +14,24 @@
         <meta property="og:description" content="Online leet speak convertor" />
         <meta property="og:title" content="l33t c0nv3rt0r" />
         <meta property="og:type"  content="website" />
-        <!-- <meta property="og:url"   content="WEBSITE_URL" /> -->
+        <meta property="og:url"   content="https://pbouillon.github.io/l33t_Converter/" />
             <!-- Image -->
         <meta property="og:image" content="img/favicon.png" />
         <meta property="og:image:alt"    content="Website icon" />
         <meta property="og:image:height" content="80" />
-        <!-- <meta property="og:image:secure_url" content="URL_TO_IMAGE" /> -->
+        <meta property="og:image:secure_url" content="https://pbouillon.github.io/l33t_Converter/img/favicon.png" />
         <meta property="og:image:type"  content="image/png" />
         <meta property="og:image:width" content="80" />
         <meta property="og:locale" content="en_GB" />
     </head>
 
-    <body onload="get_translation($('textarea[name=text]').val()) ; return false;">
+    <body onload="get_encryption($('textarea[name=text]').val()) ; populate_tab();">
         <a 
             id="in-github-corner"
             href="https://github.com/pBouillon/l33t_converter" 
             class="github-corner"
             aria-label="View source on Github">
-            <svg width="200" height="200" viewBox="0 0 250 250" aria-hidden="true">
+            <svg width="150" height="150" viewBox="0 0 250 250" aria-hidden="true">
                 <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z">
                 </path>
                 <path 
@@ -50,14 +50,14 @@
 
         <h1>l33t converter</h1>
 
-        <div id="container">
+        <div id="translation-wrap" class="container">
             <textarea 
                 id="text"
                 name="text" 
                 rows="5" 
                 cols="50" 
                 maxlength="250"
-                onkeyup="get_translation($('textarea[name=text]').val());" 
+                onkeyup="get_encryption($('textarea[name=text]').val());" 
             >Your text goes here</textarea>
 
             <textarea 
@@ -65,8 +65,55 @@
                 rows="5" 
                 cols="50" 
                 maxlength="250"
-                onkeyup="get_traduction($('textarea[name=t3xt]').val());" 
+                onkeyup="get_translation($('textarea[name=t3xt]').val());" 
             ></textarea>
+        </div>
+
+        <h2>Alphabet</h2>
+        <div id='alph-container' class="container">
+            <table id="f-quarter">
+            <thead>
+                <tr>
+                    <th>letter</th>
+                    <th>l3tt3r</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            </table>
+
+            <table id="s-quarter">
+                <thead>
+                    <tr>
+                        <th>letter</th>
+                        <th>l3tt3r</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+            <table id="t-quarter">
+                <thead>
+                    <tr>
+                        <th>letter</th>
+                        <th>l3tt3r</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+            <table id="l-quarter">
+                <thead>
+                    <tr>
+                        <th>letter</th>
+                        <th>l3tt3r</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
         </div>
 
         <!-- JQuery -->
