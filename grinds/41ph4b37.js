@@ -27,12 +27,6 @@ ALPH ['X'] = '}{' ;
 ALPH ['Y'] = '`/' ;
 ALPH ['Z'] = '2'  ;
 
-function translate_origin() {
-    var src = $('textarea[name=text]') ;
-    var des = $('textarea[name=t3xt]') ;
-    des.text(get_translation(src.val())) ;
-}
-
 /**
  * translate human readable text to l33t 
  *
@@ -53,5 +47,5 @@ function get_translation(text) {
         }
     }
 
-    return res ;
+    $('textarea[name=t3xt]').text(res) ;
 }

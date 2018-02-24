@@ -25,7 +25,7 @@
         <meta property="og:locale" content="en_GB" />
     </head>
 
-    <body onload="translate_origin(); return false;">
+    <body onload="get_translation($('textarea[name=text]').val()) ; return false;">
         <a 
             id="in-github-corner"
             href="https://github.com/pBouillon/l33t_converter" 
@@ -51,9 +51,22 @@
         <h1>l33t converter</h1>
 
         <div id="container">
-            <textarea name="text" rows="5" cols="50" maxlength="250">Your text goes here</textarea>
+            <textarea 
+                id="text"
+                name="text" 
+                rows="5" 
+                cols="50" 
+                maxlength="250"
+                onkeyup="get_translation($('textarea[name=text]').val());" 
+            >Your text goes here</textarea>
 
-            <textarea name="t3xt" rows="5" cols="50" maxlength="250"></textarea>
+            <textarea 
+                name="t3xt" 
+                rows="5" 
+                cols="50" 
+                maxlength="250"
+                onkeyup="translate();" 
+            ></textarea>
         </div>
 
         <!-- JQuery -->
